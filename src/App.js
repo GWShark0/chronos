@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { useWindowSize } from 'react-use';
 import './App.css';
 
-function App() {
+function calculateDimensions(srcWidth, srcHeight, destWidth, destHeight) {
+  console.log(...arguments);
+  const vertScale = destWidth / srcWidth;
+  const horizScale = destHeight / srcHeight;
+  const scale = Math.min(vertScale, horizScale);
+  return [srcWidth * scale, srcHeight * scale];
+}
+
+function parseAspectRatio(aspectRatio) {
+  return aspectRatio.split(':').map((x) => parseInt(x));
+}
+
+const ASPECT_RATIO = '16:9';
+
+export default function App() {
+  const { width: windowWidth, height: windowHeight } = useWindowSize();
+  const [width, height] = parseAspectRatio(ASPECT_RATIO);
+
+  const [canvasWidth, canvasHeight] = calculateDimensions(
+    width,
+    height,
+    windowWidth,
+    windowHeight
+  );
+  const canvasStyle = { width: canvasWidth, height: canvasHeight };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <canvas className="canvas" style={canvasStyle} />
     </div>
   );
 }
-
-export default App;

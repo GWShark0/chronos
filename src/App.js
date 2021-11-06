@@ -1,35 +1,35 @@
-import { useWindowSize } from 'react-use';
+import { useState } from 'react';
 import './App.css';
+import Preview from './Preview';
 
-function calculateDimensions(srcWidth, srcHeight, destWidth, destHeight) {
-  console.log(...arguments);
-  const vertScale = destWidth / srcWidth;
-  const horizScale = destHeight / srcHeight;
-  const scale = Math.min(vertScale, horizScale);
-  return [srcWidth * scale, srcHeight * scale];
-}
-
-function parseAspectRatio(aspectRatio) {
-  return aspectRatio.split(':').map((x) => parseInt(x));
-}
-
-const ASPECT_RATIO = '16:9';
+import { ReactComponent as PreviousIcon } from './icons/controls-previous.svg';
+import { ReactComponent as PlayIcon } from './icons/controls-play.svg';
+import { ReactComponent as NextIcon } from './icons/controls-next.svg';
 
 export default function App() {
-  const { width: windowWidth, height: windowHeight } = useWindowSize();
-  const [width, height] = parseAspectRatio(ASPECT_RATIO);
-
-  const [canvasWidth, canvasHeight] = calculateDimensions(
-    width,
-    height,
-    windowWidth,
-    windowHeight
-  );
-  const canvasStyle = { width: canvasWidth, height: canvasHeight };
+  const [aspectRatio, setAspectRatio] = useState('16:9');
 
   return (
     <div className="app">
-      <canvas className="canvas" style={canvasStyle} />
+      <div className="grid">
+        <header className="header">
+          <button onClick={() => setAspectRatio('16:9')}>16:9</button>
+          <button onClick={() => setAspectRatio('1:1')}>1:1</button>
+          <button onClick={() => setAspectRatio('9:16')}>9:16</button>
+        </header>
+        <div className="sidebar"></div>
+        <div className="stage">
+          <div className="preview-container">
+            <Preview aspectRatio={aspectRatio} />
+          </div>
+          <div className="controls">
+            <PreviousIcon />
+            <PlayIcon />
+            <NextIcon />
+          </div>
+        </div>
+        <div className="timeline"></div>
+      </div>
     </div>
   );
 }

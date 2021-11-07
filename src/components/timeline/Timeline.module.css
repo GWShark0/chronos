@@ -15,7 +15,7 @@
 }
 
 .track {
-  height: 48px;
-  background-color: var(--grey-750);
-  border-radius: 4px;
+  height: var(--track-height);
+  background-color: var(--track-color);
+  border-radius: var(--border-radius);
 }

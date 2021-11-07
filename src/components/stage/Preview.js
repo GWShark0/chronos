@@ -1,10 +1,9 @@
 import { memo } from 'react';
+import squareBirb from 'assets/birbs/square-birb.jpg';
+import tallBirb from 'assets/birbs/tall-birb.jpg';
+import wideBirb from 'assets/birbs/wide-birb.jpg';
+import useFlexRatio from 'hooks/useFlexRatio';
 import Image from './Image';
-import wideBirb from '../assets/birbs/wide-birb.jpg';
-import squareBirb from '../assets/birbs/square-birb.jpg';
-import tallBirb from '../assets/birbs/tall-birb.jpg';
-import useFlexRatio from '../hooks/useFlexRatio';
-
 import styles from './Preview.module.css';
 
 const BIRB_MAP = {

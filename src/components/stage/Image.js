@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { useState } from 'react';
-
 import styles from './Image.module.css';
 
 export default function Image(props) {

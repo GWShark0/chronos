@@ -1,0 +1,19 @@
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12px;
+  padding: 16px;
+  width: var(--drawer-width);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  transition-delay: 150ms;
+}
+
+.open {
+  opacity: 1;
+}

@@ -1,7 +1,6 @@
-import Sidebar from './components/Sidebar';
-import Stage from './components/Stage';
-import Timeline from './components/Timeline';
-
+import Sidebar from 'components/sidebar/Sidebar';
+import Stage from 'components/stage/Stage';
+import Timeline from 'components/timeline/Timeline';
 import styles from './App.module.css';
 
 export default function App() {

@@ -1,0 +1,21 @@
+.sidebar {
+  position: relative;
+  grid-area: sidebar;
+  width: var(--sidebar-width);
+  transition: width 150ms ease-in-out;
+  user-select: none;
+  background-color: var(--drawer-color);
+}
+
+.sidebar.open {
+  width: calc(var(--sidebar-width) + var(--drawer-width));
+}
+
+.drawerContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: var(--sidebar-width);
+  overflow-x: hidden;
+}

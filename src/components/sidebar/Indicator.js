@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
-
 import styles from './Indicator.module.css';
 
 const INDICATOR_HEIGHT = 64;

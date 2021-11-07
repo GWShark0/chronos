@@ -1,6 +1,5 @@
 import { RiArrowLeftSLine as ArrowLeft } from 'react-icons/ri';
-import { ReactComponent as TabShape } from '../assets/tab.svg';
-
+import { ReactComponent as TabShape } from 'assets/tab.svg';
 import styles from './SidebarCloseButton.module.css';
 
 export default function SidebarCloseButton(props) {

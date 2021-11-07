@@ -1,0 +1,12 @@
+.mediaControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  font-size: 24px;
+  color: var(--grey-400);
+}
+
+.mediaControls > * + * {
+  margin-left: 12px;
+}

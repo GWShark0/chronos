@@ -14,9 +14,10 @@ function parseAspectRatio(aspectRatio) {
 export default function useFlexRatio(aspectRatio) {
   const {
     ref,
-    width: containerWidth = 1,
-    height: containerHeight = 1,
+    width: containerWidth = 0,
+    height: containerHeight = 0,
   } = useResizeObserver();
+
   const [aspectWidth, aspectHeight] = parseAspectRatio(aspectRatio);
   const [width, height] = calculateDimensions(
     aspectWidth,
@@ -24,5 +25,6 @@ export default function useFlexRatio(aspectRatio) {
     containerWidth,
     containerHeight
   );
+
   return { ref, width, height };
 }

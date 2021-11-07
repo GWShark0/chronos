@@ -1,0 +1,15 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'sidebar stage'
+    'sidebar timeline';
+  width: 100%;
+  height: 100%;
+}

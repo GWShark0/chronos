@@ -1,0 +1,5 @@
+.timeline {
+  grid-area: timeline;
+  height: var(--timeline-height);
+  background-color: var(--timeline-color);
+}

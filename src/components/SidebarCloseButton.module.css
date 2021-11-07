@@ -1,0 +1,50 @@
+.sidebarClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 3px auto 0;
+  padding: 0;
+  width: 16px;
+  height: 96px;
+  color: var(--drawer-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: slideIn 150ms;
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  margin: auto;
+  font-size: 22px;
+  color: var(--grey-400);
+  opacity: 0;
+  animation: fadeIn 150ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

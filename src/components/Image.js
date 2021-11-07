@@ -18,6 +18,7 @@ export default function Image(props) {
       style={style}
       src={src}
       onLoad={handleLoad}
+      draggable={false}
       alt=""
     />
   );

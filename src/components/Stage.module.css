@@ -2,5 +2,5 @@
   grid-area: stage;
   display: flex;
   flex-direction: column;
-  padding: 32px 32px 16px 32px;
+  padding: 24px 32px 16px 32px;
 }

@@ -3,3 +3,19 @@
   height: var(--timeline-height);
   background-color: var(--timeline-color);
 }
+
+.scrollContainer {
+  padding: 16px;
+  height: 100%;
+  overflow: auto;
+}
+
+.scrollContainer > * + * {
+  margin-top: 12px;
+}
+
+.track {
+  height: 48px;
+  background-color: var(--grey-750);
+  border-radius: 4px;
+}

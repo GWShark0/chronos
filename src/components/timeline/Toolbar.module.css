@@ -1,0 +1,21 @@
+.toolbar {
+  padding: 8px 16px;
+  background-color: var(--timeline-color);
+}
+
+.button {
+  display: flex;
+  background-color: var(--grey-900);
+  border: none;
+  color: var(--grey-400);
+  font-size: 24px;
+  padding: 6px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.button:hover {
+  color: var(--grey-200);
+  background-color: var(--grey-800);
+}

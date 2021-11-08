@@ -1,0 +1,6 @@
+.track {
+  position: relative;
+  height: var(--track-height);
+  background-color: var(--track-color);
+  border-radius: var(--border-radius);
+}

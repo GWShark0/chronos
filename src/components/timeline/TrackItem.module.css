@@ -1,0 +1,16 @@
+.trackItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--track-height);
+  border-radius: var(--border-radius);
+  background-color: var(--pink-500);
+}
+
+.thumbs {
+  height: 100%;
+  background-size: contain;
+  background-repeat: repeat-x;
+  border-radius: var(--border-radius);
+  pointer-events: none;
+}

@@ -2,9 +2,12 @@
   grid-area: timeline;
   height: var(--timeline-height);
   background-color: var(--timeline-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .scrollContainer {
+  flex: 1;
   padding: 16px;
   height: 100%;
   overflow: auto;
@@ -12,10 +15,4 @@
 
 .scrollContainer > * + * {
   margin-top: 12px;
-}
-
-.track {
-  height: var(--track-height);
-  background-color: var(--track-color);
-  border-radius: var(--border-radius);
 }
